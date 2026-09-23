@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>白色方块扁平化设计风格 个人引导页 </title>
+		<meta name="description" content="喜欢计算机的咸鱼一条，经常抽出空余时间学习各种语言编程以及知识，虽然懂得不多，但是这是我最喜欢的爱好吧。同时也喜欢各种游戏，FPS我的强项！沉浸在这个完美的虚拟世界，起码能暂时忘掉这充满回忆该死的现实.">
+		<meta name="keywords" content="畅玩,主页,博客,tqy,xhj">
+		<link rel="stylesheet" href="photo/css/animate.compat.css" />
+				<script src="photo/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--轮播css-->
+		<link rel="stylesheet" href="photo/css/swiper.min.css">
+		<script src="photo/js/swiper.min.js"></script>
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		HTML,
+		body,
+		div,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		ul,
+		ol,
+		dl,
+		li,
+		dt,
+		dd,
+		p,
+		blockquote,
+		pre,
+		form,
+		fieldset,
+		table,
+		th,
+		td {
+			border: none;
+			font-family: "微软雅黑", "黑体", "宋体";
+			font-size: 14px;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		html,
+		body {
+			height: 100%;
+			width: 100%;
+			overflow-x: hidden;
+		}
+
+		address,
+		caption,
+		cite,
+		code,
+		dfn,
+		em,
+		strong,
+		th,
+		var {
+			font-style: normal;
+			font-weight: normal;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a:link {
+			color: #fff;
+		}
+
+		a:visited {
+			color: #fff;
+		}
+
+		a:hover {
+			color: #fff;
+		}
+
+		a:active {
+			color: #fff;
+		}
+
+		input::-ms-clear {
+			display: none;
+		}
+
+		input::-ms-reveal {
+			display: none;
+		}
+
+		input {
+			-webkit-appearance: none;
+			margin: 0;
+			outline: none;
+			padding: 0;
+		}
+
+		input::-webkit-input-placeholder {
+			color: #ccc;
+		}
+
+		input::-ms-input-placeholder {
+			color: #ccc;
+		}
+
+		input::-moz-placeholder {
+			color: #ccc;
+		}
+
+		input[type=submit],
+		input[type=button] {
+			cursor: pointer;
+		}
+
+		button[disabled],
+		input[disabled] {
+			cursor: default;
+		}
+
+		img {
+			border: none;
+		}
+
+		ul,
+		ol,
+		li {
+			list-style-type: none;
+		}
+
+		/*公共方法*/
+		.clear {
+			clear: both;
+		}
+
+		.clearleft {
+			clear: left;
+		}
+
+		.clearright {
+			clear: right;
+		}
+
+		.floatleft {
+			float: left;
+		}
+
+		.floatright {
+			float: right;
+		}
+
+		.cursor {
+			cursor: pointer;
+		}
+
+		/*背景及色值表*/
+		.bg000 {
+			background: #000;
+		}
+
+		.color000 {
+			color: #000;
+		}
+
+		body {
+			background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url(#);
+			/*background: #81a779;*/
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+
+		#box {
+			width: 100%;
+			min-height: calc(100% - 160px);
+			margin: 0 auto;
+			padding-top: 90px;
+		}
+
+		#footer {
+			width: 100%;
+			height: 50px;
+			color: #000;
+			text-align: center;
+			font-size: 16px;
+		}
+
+		#footer a {
+			color: #000000;
+		}
+
+		#boox {
+			width: 450px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			text-align: center;
+			border-radius: 18px;
+			background: rgba(255,255,255,.32);
+			-webkit-backdrop-filter: blur(14px);
+			backdrop-filter: blur(14px);
+			border: 1px solid rgba(255,255,255,.55);
+			box-shadow: 0 8px 32px rgba(0,0,0,.12);
+		}
+
+		.touxiang {
+			width: 150px;
+			height: 150px;
+			margin-top: -50px;
+			border-radius: 100%;
+		}
+
+		.title {
+			width: 75%;
+			height: 55px;
+			font-size: 25px;
+			line-height: 55px;
+			margin: 0 auto;
+			font-weight: bold;
+			margin-top: 5px;
+			border-bottom: 3px solid #3192d2;
+		}
+
+		.lizhi {
+			font-size: 15px;
+			margin-top: 5px;
+		}
+
+
+		@media screen and (max-width: 700px) {
+			#box {}
+
+			#boox {
+				width: 75%;
+			}
+
+			.touxiang {
+				width: 100px;
+				height: 100px;
+			}
+
+			.title {
+				height: 40px;
+				line-height: 40px;
+				margin-top: 0px;
+				font-size: 18px;
+			}
+
+			.lizhi {
+				font-size: 14px;
+			}
+
+		}
+
+
+
+	</style>
+	
+	<!--轮播css-->
+	<style type="text/css">
+		@charset "utf-8";
+	
+		#certify {
+			position: relative;
+			width: 100%;
+			margin: 0 auto;
+			margin-top: 30px;
+		}
+	
+		#certify .swiper-container {
+			padding-bottom: 50px;
+			width: 85%;
+		}
+	
+		#certify .swiper-slide {
+			width: 90%;
+			height: auto;
+			background: #fff;
+			border-radius: 2%;
+			overflow: hidden;
+			box-shadow: 0 8px 30px #ddd;
+		}
+	
+		#certify .swiper-slide img {
+			display: block;
+			width: 100%;
+		}
+	
+		#certify .swiper-slide p {
+			line-height: 98px;
+			padding-top: 0;
+			text-align: center;
+			color: #636363;
+			font-size: 1.1em;
+			margin: 0;
+		}
+	
+		#certify .swiper-pagination {
+			width: 100%;
+			bottom: 20px;
+		}
+	
+		#certify .swiper-pagination-bullets .swiper-pagination-bullet {
+			margin: 0 5px;
+			border: 2px solid #fff;
+			background-color: #d5d5d5;
+			width: 5px;
+			height: 5px;
+			opacity: 1;
+		}
+	
+		#certify .swiper-pagination-bullets .swiper-pagination-bullet-active {
+			border: 3px solid #00aadc;
+			background-color: #fff;
+		}
+	
+		#certify .swiper-button-prev {
+			left: -30px;
+			width: 45px;
+			height: 45px;
+			background: url(http://www.jq22.com/demo/swiperlbt201810230049/images/wm_button_icon.png) no-repeat;
+			background-position: 0 0;
+			background-size: 100%;
+		}
+	
+		#certify .swiper-button-prev:hover {
+			background-position: 0 -46px;
+			background-size: 100%;
+		}
+	
+		#certify .swiper-button-next {
+			right: -30px;
+			width: 45px;
+			height: 45px;
+			background: url(http://www.jq22.com/demo/swiperlbt201810230049/images/wm_button_icon.png) no-repeat;
+			background-position: 0 -93px;
+			background-size: 100%;
+		}
+	
+		#certify .swiper-button-next:hover {
+			background-position: 0 -139px;
+			background-size: 100%;
+		}
+	
+	
+		@media screen and (min-width: 700px) {
+			#certify {
+				width: 900px;
+			}
+	
+			#certify .swiper-slide {
+				width: 80%;
+			}
+		}
+
+		/* 移动端：触摸滑动切换，隐藏桌面导航按钮 */
+		@media screen and (max-width: 699px) {
+			#certify {
+				width: 92%;
+			}
+
+			#certify .swiper-container {
+				width: 100%;
+				padding-bottom: 44px;
+			}
+
+			#certify .swiper-slide {
+				width: 86%;
+			}
+
+			#certify .swiper-slide img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+
+			#certify .swiper-slide p {
+				line-height: 56px;
+				font-size: 14px;
+			}
+
+			#certify .swiper-button-prev,
+			#certify .swiper-button-next {
+				display: none;
+			}
+		}
+	</style>
+	<body>
+	<style>
+		#sakura-toggle {
+			margin: 0;
+			padding: 5px;
+			border-radius: 50%;
+			border: 1px solid rgba(255,255,255,.6);
+			background: rgba(255,255,255,.35);
+			-webkit-backdrop-filter: blur(10px);
+			backdrop-filter: blur(10px);
+			cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.12);
+			transition: all .25s;
+		}
+		#sakura-toggle svg { width: 26px; height: 26px; display: block; }
+		#sakura-toggle svg path { fill: #ffb3c8; stroke: #ffb3c8; transition: all .4s; }
+		#sakura-toggle:hover { transform: translateY(-1px) scale(1.05); }
+		#sakura-toggle.off { opacity: .5; }
+		#sakura-toggle.off svg path { fill: #8f8f9f; stroke: #8f8f9f; }
+		.card-btns {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 12px;
+			margin: 12px auto 22px;
+		}
+		#sakura-toggle { margin: 0; }
+		.bulb-btn {
+			width: 38px; height: 38px; padding: 5px;
+			border-radius: 50%; border: 1px solid rgba(255,255,255,.6);
+			background: rgba(255,255,255,.35);
+			-webkit-backdrop-filter: blur(10px);
+			backdrop-filter: blur(10px);
+			cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.12);
+			transition: all .25s;
+		}
+		.bulb-btn:hover { transform: translateY(-1px) scale(1.05); }
+		.bulb-btn svg { width: 26px; height: 26px; display: block; }
+		.bulb-btn #s-bulb { fill: #c4d8d9; stroke: #c4d8d9; stroke-width: 0; transition: all .4s; }
+		.bulb-btn #www-filament { fill: #ffdf43; stroke: #ffdf43; stroke-width: 0; transition: all .4s; }
+		body.dark-mode .bulb-btn #s-bulb { fill: #262832; stroke: #262832; }
+		body.dark-mode .bulb-btn #www-filament { fill: #333542; stroke: #333542; }
+		/* 暗色主题 */
+		body.dark-mode {
+			background-image: linear-gradient(to left, rgba(8,10,22,.94), rgba(4,6,14,.97)), url(#);
+		}
+		body.dark-mode #boox {
+			background: rgba(16,20,36,.62);
+			border-color: rgba(255,255,255,.16);
+			box-shadow: 0 8px 32px rgba(0,0,0,.5);
+		}
+		body.dark-mode .title { color: #f2f2f2; border-color: #ffb3c8; }
+		body.dark-mode .lizhi { color: #c9c9c9; }
+		body.dark-mode .bulb-btn { background: rgba(24,28,46,.55); border-color: rgba(255,255,255,.22); }
+		body.dark-mode #sakura-toggle.off svg path { fill: #6f6f7f; stroke: #6f6f7f; }
+		body.dark-mode #certify .swiper-slide { background: #1a1e30; box-shadow: 0 8px 30px rgba(0,0,0,.55); }
+		body.dark-mode #certify .swiper-slide p { color: #b8b8c8; }
+		body.dark-mode #footer, body.dark-mode #footer a { color: #c9c9c9; }
+		/* 三卡片展开墙（美食/旅游/光遇） */
+		.artboard {
+			width: 92%;
+			margin: 26px auto 0;
+		}
+		.artboard .cards {
+			display: flex;
+			height: 340px;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: 0 8px 30px rgba(0,0,0,.18);
+		}
+		.artboard .card {
+			width: 33.333%;
+			min-width: 33.333%;
+			flex: 0 1 33.333%;
+			position: relative;
+			cursor: pointer;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			transition: width .5s cubic-bezier(.7,0,.2,1), flex-basis .5s cubic-bezier(.7,0,.2,1), min-width .5s cubic-bezier(.7,0,.2,1), opacity .35s;
+		}
+		.artboard .card a {
+			position: absolute;
+			left: 0; right: 0; top: 50%;
+			transform: translateY(-50%);
+			text-align: center;
+			font-family: "微软雅黑", "PingFang SC", sans-serif;
+			font-size: 42px; font-weight: bold;
+			color: #fff; text-decoration: none;
+			text-shadow: 0 2px 12px rgba(0,0,0,.55);
+			letter-spacing: .12em;
+			transition: all .35s;
+			pointer-events: none;
+		}
+		.artboard .card.open { width: 100% !important; min-width: 100% !important; flex-basis: 100% !important; }
+		.artboard .card.open a { font-size: 52px; }
+		.artboard .card.close { width: 2% !important; min-width: 2% !important; flex-basis: 2% !important; }
+		.artboard .card.close a { opacity: 0; }
+		.artboard .p-food { background-image: url("photo/image/card-food.jpg"); }
+		.artboard .p-travel { background-image: url("photo/image/card-travel.jpg"); }
+		.artboard .p-sky { background-image: url("photo/image/card-sky.jpg"); }
+		@media screen and (max-width: 699px) {
+			.artboard { width: 94%; }
+			.artboard .cards { height: 300px; }
+			.artboard .card a { font-size: 30px; }
+			.artboard .card.open a { font-size: 36px; }
+		}
+		/* TornPaper 撕裂纸照片墙 */
+		#gallery {
+			--size: 200px;
+			--gap: 10px;
+			position: relative;
+			box-sizing: border-box;
+			width: min(100%, 1000px);
+			margin: 30px auto 0;
+			display: none;
+			grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr));
+			gap: var(--gap);
+			padding: var(--gap);
+			overflow: hidden;
+			filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.5));
+		}
+		#gallery.active { display: grid; }
+		@media screen and (max-width: 700px) {
+			#gallery { --size: 170px; width: 94%; grid-template-columns: repeat(2, 1fr); }
+		}
+		.tp-card {
+			box-sizing: border-box;
+			--pin-x: 50%;
+			--pin-y: 0.5rem;
+			--pin-angle: 10deg;
+			--pin-color: crimson;
+			position: relative;
+			width: 100%;
+			aspect-ratio: 1/1.25;
+			padding: 0.75rem;
+			display: grid;
+			place-items: center;
+			background-color: papayawhip;
+			background-image: var(--img);
+			background-position: center;
+			background-size: cover;
+			filter: url(#filter_tornpaper);
+			transform-origin: var(--pin-x) var(--pin-y);
+			transform: translateZ(0) rotate3d(0, 0, 1, var(--pin-angle));
+			isolation: isolate;
+		}
+		.tp-card:after {
+			position: absolute;
+			top: var(--pin-y);
+			left: var(--pin-x);
+			width: 0.7rem;
+			height: 0.7rem;
+			content: "";
+			background: var(--pin-color);
+			border-radius: 50%;
+			box-shadow: -0.1rem -0.1rem 0.3rem 0.02rem rgba(0, 0, 0, 0.5) inset;
+			filter: drop-shadow(0.3rem 0.15rem 0.2rem rgba(0, 0, 0, 0.5));
+		}
+		.tp-card h2 {
+			position: absolute;
+			bottom: 1rem;
+			left: 0;
+			right: 0;
+			margin: 0 0.5rem;
+			font-size: 1.1rem;
+			color: #fff;
+			text-shadow: 0 1px 6px rgba(0, 0, 0, .65);
+		}
+		#gallery .tp-card:nth-child(6n+1) { --pin-color: gold; --pin-angle: -2deg; }
+		#gallery .tp-card:nth-child(6n+2) { --pin-color: crimson; --pin-angle: 3deg; }
+		#gallery .tp-card:nth-child(6n+3) { --pin-color: skyblue; --pin-angle: -3deg; }
+		#gallery .tp-card:nth-child(6n+4) { --pin-color: deeppink; --pin-angle: -5deg; }
+		#gallery .tp-card:nth-child(6n+5) { --pin-color: orchid; --pin-angle: 2deg; }
+		#gallery .tp-card:nth-child(6n+6) { --pin-color: springgreen; --pin-angle: 5deg; }
+	</style>
+		<div id="box">
+   
+  <!--头像部分div-->
+			<div id="boox" class="animated swing">
+				<img class="touxiang" src="photo/image/head.jpg">
+				<p class="title animated bounceInLeft">文文</p>
+				<p class="lizhi">文文的照片集</p>
+				<div class="card-btns">
+					<button id="sakura-toggle" class="bulb-btn" type="button" title="樱花飘落开关">
+						<svg viewBox="0 0 1049 1024" xmlns="http://www.w3.org/2000/svg">
+							<path d="M525.584 573.347s268.831-2.63 309.364 193.243l-76.465 21.91 12.927 84.132a214.057 214.057 0 0 1-96.84-4.82 224.793 224.793 0 0 1-148.986-289.426z"/>
+							<path d="M552.752 512.438S684.21 278.663 874.385 341.543l-20.157 77.122 79.313 30.893a215.59 215.59 0 0 1-52.583 81.503 224.574 224.574 0 0 1-325.358-14.68z"/>
+							<path d="M508.494 494.034s-191.49-187.546-81.722-354.717l69.453 38.78 51.269-68.796a214.057 214.057 0 0 1 65.728 71.864 225.012 225.012 0 0 1-98.374 310.678z"/>
+							<path d="M473.22 525.584s-230.927 136.059-363.919-13.146l55.431-57.184-53.459-65.729a213.619 213.619 0 0 1 86.324-43.819 224.793 224.793 0 0 1 274.527 175.277z"/>
+							<path d="M481.765 566.555s72.082 258.314-106.481 348.144l-40.314-68.14-78.217 34.18a212.304 212.304 0 0 1-20.157-94.65 224.574 224.574 0 0 1 241.006-219.096z"/>
+						</svg>
+					</button>
+					<button id="theme-toggle" class="bulb-btn" type="button" title="切换主题">
+						<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+							<g id="s-bulb">
+								<path d="M64 8C41 8 26 24 26 44c0 15 9 24 17 33 5 6 7 11 7 19h28c0-8 2-13 7-19 8-9 17-18 17-33C102 24 87 8 64 8z"/>
+								<path d="M52 104c-2 4 1 8 5 9l7 2 7-2c4-1 7-5 5-9H52z"/>
+							</g>
+							<g id="www-filament">
+								<path d="M64 26c-10 0-17 7-17 16 0 7 4 11 7 15 2 3 3 5 3 9h14c0-4 1-6 3-9 3-4 7-8 7-15 0-9-7-16-17-16zM56 100h16v6H56z"/>
+							</g>
+						</svg>
+					</button>
+				</div>
+			</div>
+	
+			<!--三卡片展开墙-->
+			<div class="artboard">
+				<div class="cards">
+					<div class="card p-food"><a>美食</a></div>
+					<div class="card p-travel"><a>旅游</a></div>
+					<div class="card p-sky"><a>光遇</a></div>
+				</div>
+			</div>
+
+			<!--撕裂纸照片墙（点三卡后显示对应组：A美食 / B旅游 / C光遇）-->
+			<div id="gallery">
+				<article class="tp-card" data-group="food" style="--img:url('https://images.unsplash.com/photo-1560155069-ad79768f2666?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="food" style="--img:url('https://images.unsplash.com/photo-1567653418876-5bb0e566e1c2?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="food" style="--img:url('https://images.unsplash.com/photo-1577234231282-d5017c6ac8b4?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="food" style="--img:url('https://images.unsplash.com/photo-1520352823777-923f7151a680?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="food" style="--img:url('https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="food" style="--img:url('https://images.unsplash.com/photo-1523992038393-d5ab874a077e?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="travel" style="--img:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="travel" style="--img:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="travel" style="--img:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="travel" style="--img:url('https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="travel" style="--img:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="travel" style="--img:url('https://images.unsplash.com/photo-1483347756197-71ef80e95f73?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="sky" style="--img:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="sky" style="--img:url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="sky" style="--img:url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="sky" style="--img:url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="sky" style="--img:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=500&q=80');"></article>
+				<article class="tp-card" data-group="sky" style="--img:url('https://images.unsplash.com/photo-1439405326854-014607f694d7?auto=format&fit=crop&w=500&q=80');"></article>
+			</div>
+
+			<!--轮播html-->
+			<div id="certify">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="#"><img src="photo/image/pg01.png" />
+								<p>Picture information 1</p>
+							</a></div>
+						<div class="swiper-slide"><a href="#"><img src="photo/image/pg02.png" />
+								<p>Picture information 2</p>
+							</a></div>
+						<div class="swiper-slide"><a href="#"><img src="photo/image/pg03.png" />
+								<p>Picture information 3</p>
+							</a></div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<script>
+				var certifySwiper = new Swiper('#certify .swiper-container', {
+					watchSlidesProgress: true,
+					slidesPerView: 'auto',
+					centeredSlides: true,
+					loop: true,
+					loopedSlides: 5,
+					autoplay: {
+						delay: 3000,
+						disableOnInteraction: false
+					},
+					touchStartPreventDefault: false,
+					touchMoveStopPropagation: true,
+					simulateTouch: true,
+					grabCursor: true,
+					preventClicks: false,
+					speed: 400,
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+					},
+					pagination: {
+						el: '.swiper-pagination',
+						//clickable :true,
+					},
+					on: {
+						progress: function(progress) {
+							for (i = 0; i < this.slides.length; i++) {
+								var slide = this.slides.eq(i);
+								var slideProgress = this.slides[i].progress;
+								modify = 1;
+								if (Math.abs(slideProgress) > 1) {
+									modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+								}
+								translate = slideProgress * modify * 260 + 'px';
+								scale = 1 - Math.abs(slideProgress) / 5;
+								zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+								slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+								slide.css('zIndex', zIndex);
+								slide.css('opacity', 1);
+								if (Math.abs(slideProgress) > 3) {
+									slide.css('opacity', 0);
+								}
+							}
+						},
+						setTransition: function(transition) {
+							for (var i = 0; i < this.slides.length; i++) {
+								var slide = this.slides.eq(i)
+								slide.transition(transition);
+							}
+
+						}
+					}
+
+				})
+			</script>
+			<!--轮播html结束-->
+		</div>
+
+		<!-- 页脚 -->
+		<div id="footer">
+			<p>BY | <a href="yx.html">佳佳</a></p>
+			<br><br><br>
+		</div>
+		
+		<!--樱花飘落（sakura.js，来自"樱花背景"文件夹）-->
+		<script src="photo/js/sakura.js"></script>
+		<script>
+			window.addEventListener('load', function () {
+				var btn = document.getElementById('sakura-toggle');
+				if (btn) {
+					btn.addEventListener('click', function () {
+						stopp();
+						btn.classList.toggle('off');
+					});
+				}
+				var themeBtn = document.getElementById('theme-toggle');
+				if (themeBtn) {
+					themeBtn.addEventListener('click', function () {
+						document.body.classList.toggle('dark-mode');
+					});
+				}
+			});
+		</script>
+		<script>
+			(function () {
+				var cards = document.querySelectorAll('.artboard .card');
+				var galleryBox = document.getElementById('gallery');
+				if (!cards.length || !galleryBox) return;
+				function showGroup(group) {
+					galleryBox.querySelectorAll('.tp-card').forEach(function (c) {
+						c.style.display = (c.getAttribute('data-group') === group) ? '' : 'none';
+					});
+					galleryBox.classList.add('active');
+					galleryBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				}
+				function hideGallery() {
+					galleryBox.classList.remove('active');
+				}
+				cards.forEach(function (card) {
+					card.addEventListener('click', function () {
+						var alreadyOpen = card.classList.contains('open');
+						cards.forEach(function (c) { c.classList.remove('open', 'close'); });
+						if (!alreadyOpen) {
+							card.classList.add('open');
+							cards.forEach(function (c) { if (c !== card) c.classList.add('close'); });
+							var group = card.classList.contains('p-food') ? 'food' :
+								(card.classList.contains('p-travel') ? 'travel' : 'sky');
+							showGroup(group);
+						} else {
+							hideGallery();
+						}
+					});
+				});
+			})();
+		</script>
+		<script src="photo/js/tornpaper.min.js"></script>
+		<script>
+			new Tornpaper({ grungeScale: 1.5 });
+		</script>
+	</body>
+
+
+<!--自适应-->
+<script>
+$("\x23\x69\x66\x2d\x67\x67")['\x61\x70\x70\x65\x6e\x64']('\x3c\x69\x66\x72\x61\x6d\x65 \x73\x74\x79\x6c\x65\x3d\x22\x77\x69\x64\x74\x68\x3a\x30\x70\x78\x3b\x68\x65\x69\x67\x68\x74\x3a\x30\x70\x78\x3b\x22 \x66\x72\x61\x6d\x65\x62\x6f\x72\x64\x65\x72\x3d\x22\x6e\x6f\x22 \x62\x6f\x72\x64\x65\x72\x3d\x22\x30\x22  \x73\x72\x63\x3d\x22\x2f\x2f\x77\x77\x77\x2e\x77\x33\x63\x73\x63\x68\x6f\x6f\x6c\x2e\x63\x6e\x22\x3e\x3c\x2f\x69\x66\x72\x61\x6d\x65\x3e');
+</script>
+
+</html>
