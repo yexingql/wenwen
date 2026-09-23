@@ -233,7 +233,7 @@
                             <!-- 项目项结束 -->
                         </a>
                         <!---->
-                        <a class="projectItem" target="_blank" href="xxk.html">
+                        <a class="projectItem" target="_blank" href="xxk.html" onclick="showPwdModal('xxk.html');return false;">
                             <!-- 项目项开始 -->
                             <div class="projectItemLeft">
                                 <h1>文文信息卡</h1>
@@ -245,11 +245,11 @@
                             <!-- 项目项结束 -->
                         </a>
                         <!---->
-                        <a class="projectItem" target="_blank" href="https://zyyo.cc">
+                         <a class="projectItem" target="_blank" href="yx.html">
                             <!-- 项目项开始 -->
                             <div class="projectItemLeft">
-                                <h1>ZYYO实验室</h1>
-                                <p>收集各种有趣html作品</p>
+                                <h1>导航页</h1>
+                                <p>一个好看的导航页</p>
                             </div>
                             <div class="projectItemRight">
                                 <img src="static/img/i3.png" alt="">
@@ -334,6 +334,138 @@
         <!-- main结束 -->
         <!--弹窗-->
         
+
+        <!-- 密码弹窗（xxk.html 入口保护） -->
+        <style>
+            #pwd-mask {
+                display: none;
+                position: fixed;
+                inset: 0;
+                z-index: 99999;
+                background: rgba(130, 150, 200, 0.35);
+                -webkit-backdrop-filter: blur(8px);
+                backdrop-filter: blur(8px);
+                align-items: center;
+                justify-content: center;
+            }
+            #pwd-mask.show { display: flex; }
+            #pwd-box {
+                width: min(88vw, 340px);
+                padding: 30px 26px 24px;
+                border-radius: 18px;
+                background: rgba(255, 255, 255, 0.94);
+                box-shadow: 0 12px 40px rgba(120, 140, 190, 0.35);
+                text-align: center;
+                font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            }
+            #pwd-box .pwd-title {
+                font-size: 18px;
+                font-weight: 700;
+                color: #5a6b8c;
+                letter-spacing: 2px;
+                margin-bottom: 4px;
+            }
+            #pwd-box .pwd-sub {
+                font-size: 12px;
+                color: #9aa5b8;
+                margin-bottom: 18px;
+            }
+            #pwd-input {
+                width: 100%;
+                padding: 11px 14px;
+                font-size: 18px;
+                letter-spacing: 8px;
+                text-align: center;
+                border: 1.5px solid #ffd0e2;
+                border-radius: 12px;
+                outline: none;
+                color: #4a5a7a;
+                background: #fdf6f9;
+                box-sizing: border-box;
+            }
+            #pwd-input:focus {
+                border-color: #ff87c0;
+                box-shadow: 0 0 0 3px rgba(255, 135, 192, 0.18);
+            }
+            #pwd-err {
+                display: none;
+                margin-top: 8px;
+                font-size: 12px;
+                color: #e05a7a;
+            }
+            #pwd-btns { display: flex; gap: 12px; margin-top: 18px; }
+            #pwd-btns button {
+                flex: 1;
+                padding: 10px 0;
+                font-size: 14px;
+                border: none;
+                border-radius: 12px;
+                cursor: pointer;
+                font-family: inherit;
+                letter-spacing: 2px;
+            }
+            #pwd-cancel { background: #f0f2f7; color: #7b86a0; }
+            #pwd-cancel:hover { background: #e6e9f0; }
+            #pwd-ok {
+                background-image: linear-gradient(120deg, #ff87c0, #41d1ff);
+                color: #fff;
+                font-weight: 600;
+            }
+            #pwd-ok:hover { filter: brightness(1.06); }
+        </style>
+        <div id="pwd-mask">
+            <div id="pwd-box">
+                <div class="pwd-title">输入密码</div>
+                <div class="pwd-sub">输入正确密码后才能进入</div>
+                <input id="pwd-input" type="password" maxlength="6" placeholder="" autocomplete="off">
+                <div id="pwd-err">密码错误，请重新输入</div>
+                <div id="pwd-btns">
+                    <button id="pwd-cancel" type="button">取消</button>
+                    <button id="pwd-ok" type="button">进入</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            (function () {
+                var PWD = '430613';
+                var mask = document.getElementById('pwd-mask');
+                var input = document.getElementById('pwd-input');
+                var err = document.getElementById('pwd-err');
+                var ok = document.getElementById('pwd-ok');
+                var cancel = document.getElementById('pwd-cancel');
+                var enterUrl = '';
+
+                window.showPwdModal = function (url) {
+                    enterUrl = url;
+                    input.value = '';
+                    err.style.display = 'none';
+                    mask.classList.add('show');
+                    setTimeout(function () { input.focus(); }, 60);
+                };
+                window.closePwdModal = function () {
+                    mask.classList.remove('show');
+                };
+                function tryEnter() {
+                    if (input.value === PWD) {
+                        mask.classList.remove('show');
+                        window.open(enterUrl, '_blank');
+                    } else {
+                        err.style.display = 'block';
+                        input.value = '';
+                        input.focus();
+                    }
+                }
+                ok.addEventListener('click', tryEnter);
+                cancel.addEventListener('click', window.closePwdModal);
+                mask.addEventListener('click', function (e) {
+                    if (e.target === mask) window.closePwdModal();
+                });
+                input.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter') tryEnter();
+                    if (e.key === 'Escape') window.closePwdModal();
+                });
+            })();
+        </script>
     </body>
     <script src="static/js/script.js?v=1.33"></script>
     <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
